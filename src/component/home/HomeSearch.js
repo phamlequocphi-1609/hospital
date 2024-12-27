@@ -1,16 +1,4 @@
-import {
-  MapPin,
-  Utensils,
-  ShoppingCart,
-  Candy,
-  Cake,
-  Map,
-  Carrot,
-  Pill,
-  Music,
-  Martini,
-} from "lucide-react";
-import { Link } from "react-router-dom";
+import { ShoppingCart, Candy, Cake, Map, Carrot, Pill } from "lucide-react";
 
 function HomeSearch() {
   return (
@@ -26,7 +14,6 @@ function HomeSearch() {
           </p>
         </div>
 
-        {/* Search Section */}
         <div className="mt-10">
           <div className="max-w-4xl mx-auto rounded-lg shadow-lg bg-white p-3 md:p-4">
             <div className="flex flex-col md:flex-row gap-4">
@@ -48,7 +35,6 @@ function HomeSearch() {
           </div>
         </div>
 
-        {/* Categories Section */}
         <div className="container mx-auto px-4">
           <div className="mt-10 text-center">
             <p className="text-lg text-white mb-6">

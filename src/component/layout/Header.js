@@ -1,5 +1,4 @@
 import { ChevronDown, LogIn, Globe, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../assets/img/logo.png";
 import ButtonLink from "../../core/ButtonLink";
@@ -31,27 +30,29 @@ function Header() {
             <nav>
               <ul className="flex space-x-6">
                 <li>
-                  <ButtonLink text="Home" />
+                  <ButtonLink text="Home" link="/" />
                 </li>
                 <li>
                   <ButtonLink text="Find a hospital" />
                 </li>
                 <li>
-                  <ButtonLink text="Community" />
+                  <ButtonLink text="Service" />
                 </li>
                 <li>
-                  <ButtonLink text="Find a hospital near me" />
+                  <ButtonLink text="About us" link="" />
+                </li>
+                <li>
+                  <ButtonLink text="Contact Us" link="/contactus" />
+                </li>
+                <li>
+                  <ButtonLink text="Login" />
                 </li>
               </ul>
             </nav>
-
             <div className="flex items-center space-x-4">
-              <ButtonLink text="Log in" />
-              <ButtonLink text="Mypage" />
-              <ButtonLink text="Contact Us" />
               <div className="relative">
                 <button
-                  className="flex items-center uppercase lg:text-[16px] md:text-[12px] "
+                  className="flex items-center uppercase xl:text-[16px] md:text-[12px] "
                   onClick={() => setShowLanguage(!showLanguage)}
                 >
                   Language
@@ -102,25 +103,23 @@ function Header() {
                     />
                   </li>
                   <li>
-                    <ButtonLink text="Community" className="block w-full" />
+                    <ButtonLink text="Service" className="block w-full" />
                   </li>
                   <li>
-                    <ButtonLink
-                      text="Find a hospital near me"
-                      className="block w-full"
-                    />
+                    <ButtonLink text="About us" className="block w-full" />
+                  </li>
+                  <li>
+                    <ButtonLink text="Contact us" className="block w-full" />
+                  </li>
+                  <li>
+                    <ButtonLink text="Login" className="block w-full" />
                   </li>
                 </ul>
               </nav>
-
               <div className="space-y-4">
-                <ButtonLink text="Log in" className="block w-full" />
-                <ButtonLink text="Mypage" className="block w-full" />
-                <ButtonLink text="Contact Us" className="block w-full" />
-
                 <div className="relative">
                   <button
-                    className="flex items-center uppercase text-white w-full"
+                    className="flex items-center uppercase w-full xl:text-[16px] md:text-[12px] "
                     onClick={() => setShowLanguage(!showLanguage)}
                   >
                     Language

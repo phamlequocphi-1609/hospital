@@ -80,3 +80,20 @@ footer a.text-secondary:hover {
   border: none;
   box-shadow: 0 0 0 3px hsla(0, 0%, 100%, 0.2);
 }
+.btn__contact {
+  background: hsla(0, 0%, 100%, 0.2);
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+
+.contact__card {
+  border: 1px solid #e1e6eb;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05);
+}
+.contact__icon {
+  box-shadow: 0 0 0 5px rgba(70, 17, 167, 0.1),
+    0 0 0 10px rgba(70, 17, 167, 0.1);
+}
+.contact__form input {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05);
+}

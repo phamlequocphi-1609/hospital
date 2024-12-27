@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -166,7 +165,7 @@ const HomePlace = () => {
     return (
       <button
         onClick={onClick}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#4611a7] text-white w-10 h-10 flex items-center justify-center"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#4611a7] w-10 h-10 flex items-center justify-center"
       >
         <svg
           className="w-6 h-6"
