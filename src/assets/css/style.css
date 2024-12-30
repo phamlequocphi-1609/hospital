@@ -97,3 +97,13 @@ footer a.text-secondary:hover {
 .contact__form input {
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05);
 }
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

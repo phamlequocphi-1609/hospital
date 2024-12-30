@@ -39,7 +39,7 @@ function Header() {
                   <ButtonLink text="Service" />
                 </li>
                 <li>
-                  <ButtonLink text="About us" link="" />
+                  <ButtonLink text="About us" link="/aboutus" />
                 </li>
                 <li>
                   <ButtonLink text="Contact Us" link="/contactus" />

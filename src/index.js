@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./component/home/Home";
 import ContactUs from "./component/contactus/ContactUs";
+import AboutUs from "./component/aboutus/AboutUs";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,6 +16,7 @@ root.render(
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/aboutus" element={<AboutUs />} />
         </Routes>
       </App>
     </Router>
