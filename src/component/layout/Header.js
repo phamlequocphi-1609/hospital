@@ -50,6 +50,9 @@ function Header() {
                     <ButtonLink text="Find a hospital" />
                   </li>
                   <li>
+                    <ButtonLink text="Blog" link="/bloglist" />
+                  </li>
+                  <li>
                     <ButtonLink text="Service" />
                   </li>
                   <li>
