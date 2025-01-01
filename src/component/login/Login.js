@@ -61,6 +61,9 @@ const Login = ({ isOpenLogin, onClose, onRegisterClick }) => {
                 className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#f05123] focus:outline-none text-[#000]"
               />
             </div>
+            <button className="w-full bg-[#f05123] p-3 rounded-lg font-semibold hover:bg-[#d63f11] transition-colors duration-200">
+              Đăng nhập
+            </button>
           </form>
 
           <div className="mt-6 text-center text-sm">

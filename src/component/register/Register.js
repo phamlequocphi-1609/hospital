@@ -73,6 +73,9 @@ const Register = ({ isOpenRegister, onClose, onLoginClick }) => {
               className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#dce0e3] focus:outline-none text-[#000]"
             />
           </div>
+          <button className="w-full bg-[#f05123] p-3 rounded-lg font-semibold hover:bg-[#d63f11] transition-colors duration-200">
+            Đăng ký
+          </button>
         </form>
 
         <div className="mt-6 text-center text-sm">
