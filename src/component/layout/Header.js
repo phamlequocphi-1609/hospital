@@ -111,7 +111,11 @@ function Header() {
                 <nav className="mb-8">
                   <ul className="space-y-4">
                     <li>
-                      <ButtonLink text="Home" className="block w-full" />
+                      <ButtonLink
+                        text="Home"
+                        link="/"
+                        className="block w-full"
+                      />
                     </li>
                     <li>
                       <ButtonLink
@@ -123,10 +127,18 @@ function Header() {
                       <ButtonLink text="Service" className="block w-full" />
                     </li>
                     <li>
-                      <ButtonLink text="About us" className="block w-full" />
+                      <ButtonLink
+                        text="About us"
+                        link="/aboutus"
+                        className="block w-full"
+                      />
                     </li>
                     <li>
-                      <ButtonLink text="Contact us" className="block w-full" />
+                      <ButtonLink
+                        text="Contact us"
+                        link="/contactus"
+                        className="block w-full"
+                      />
                     </li>
                     <li>
                       <ButtonLink
