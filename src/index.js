@@ -7,6 +7,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "./component/home/Home";
 import ContactUs from "./component/contactus/ContactUs";
 import AboutUs from "./component/aboutus/AboutUs";
+import Register from "./component/register/Register";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
