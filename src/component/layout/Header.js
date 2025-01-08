@@ -111,7 +111,7 @@ function Header() {
               </button>
 
               <div className="p-6 pt-16">
-                <nav className="mb-8">
+                <nav className="mb-[18px]">
                   <ul className="space-y-4">
                     <li>
                       <ButtonLink
@@ -128,6 +128,13 @@ function Header() {
                     </li>
                     <li>
                       <ButtonLink text="Service" className="block w-full" />
+                    </li>
+                    <li>
+                      <ButtonLink
+                        text="Blog"
+                        link="/bloglist"
+                        className="block w-full"
+                      />
                     </li>
                     <li>
                       <ButtonLink
@@ -162,7 +169,7 @@ function Header() {
                 <div className="space-y-4">
                   <div className="relative">
                     <button
-                      className="flex items-center uppercase w-full xl:text-[16px] md:text-[12px] "
+                      className="flex text-[#fff] items-center uppercase w-full xl:text-[16px] md:text-[12px] "
                       onClick={() => setShowLanguage(!showLanguage)}
                     >
                       Language

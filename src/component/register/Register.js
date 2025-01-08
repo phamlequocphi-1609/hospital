@@ -127,7 +127,38 @@ const Register = ({ isOpenRegister, onClose, onLoginClick }) => {
             Đăng ký
           </button>
         </form>
-        {/* Các phần còn lại không thay đổi */}
+        <div className="mt-6 text-center text-sm">
+          <p className="text-gray-600">
+            Bạn chưa có tài khoản?
+            <Link
+              onClick={(e) => {
+                e.preventDefault();
+                onClose();
+                onLoginClick();
+              }}
+              to=""
+              className="text-[#f05123] font-semibold underline ml-1"
+            >
+              Đăng nhập
+            </Link>
+          </p>
+          <Link
+            to=""
+            className="text-[#f05123] font-semibold underline block mt-2"
+          >
+            Quên mật khẩu?
+          </Link>
+        </div>
+
+        <div className="mt-6 text-center text-sm text-[#666]">
+          <p>
+            Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng ý với
+            <Link to="" className="text-[#666] underline ml-1">
+              điều khoản sử dụng
+            </Link>{" "}
+            của chúng tôi.
+          </p>
+        </div>
       </div>
     </div>
   );
