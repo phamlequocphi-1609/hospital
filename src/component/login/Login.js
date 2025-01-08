@@ -88,6 +88,12 @@ const Login = ({ isOpenLogin, onClose, onRegisterClick }) => {
                 <p className="text-sm text-red-500 mt-1">{errors.password}</p>
               )}
             </div>
+            <div className="flex items-center">
+              <input type="checkbox" />
+              <span className="ms-2 text-sm font-medium text-gray-700">
+                Ghi nhớ đăng nhập
+              </span>
+            </div>
             <button
               type="submit"
               className="w-full bg-[#f05123] p-3 rounded-lg font-semibold hover:bg-[#d63f11] transition-colors duration-200 text-[#fff]"
