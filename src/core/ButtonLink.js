@@ -5,7 +5,7 @@ const ButtonLink = ({ text, link, onClick }) => {
     <Link
       to={link}
       onClick={onClick}
-      className="flex h-full items-center xl:text-[16px] md:text-[12px] font-medium uppercase"
+      className="flex h-full items-center xl:text-[16px] md:text-[12px] font-medium uppercase text-[#fff]"
     >
       {text}
     </Link>

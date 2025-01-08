@@ -123,7 +123,7 @@ const Register = ({ isOpenRegister, onClose, onLoginClick }) => {
               <p className="text-red-500 text-sm mt-1">{errors.password}</p>
             )}
           </div>
-          <button className="w-full bg-[#f05123] p-3 rounded-lg font-semibold hover:bg-[#d63f11] transition-colors duration-200">
+          <button className="w-full bg-[#f05123] p-3 rounded-lg font-semibold hover:bg-[#d63f11] transition-colors duration-200 text-[#fff]">
             Đăng ký
           </button>
         </form>

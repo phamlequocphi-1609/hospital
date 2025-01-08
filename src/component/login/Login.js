@@ -90,7 +90,7 @@ const Login = ({ isOpenLogin, onClose, onRegisterClick }) => {
             </div>
             <button
               type="submit"
-              className="w-full bg-[#f05123] p-3 rounded-lg font-semibold hover:bg-[#d63f11] transition-colors duration-200"
+              className="w-full bg-[#f05123] p-3 rounded-lg font-semibold hover:bg-[#d63f11] transition-colors duration-200 text-[#fff]"
             >
               Đăng nhập
             </button>

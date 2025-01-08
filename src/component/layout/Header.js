@@ -72,7 +72,7 @@ function Header() {
               <div className="flex items-center space-x-4">
                 <div className="relative">
                   <button
-                    className="flex items-center uppercase xl:text-[16px] md:text-[12px] "
+                    className="flex items-center uppercase xl:text-[16px] font-[600] md:text-[12px]  text-[#fff]"
                     onClick={() => setShowLanguage(!showLanguage)}
                   >
                     Language
