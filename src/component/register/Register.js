@@ -57,7 +57,7 @@ const Register = ({ isOpenRegister, onClose, onLoginClick }) => {
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Name
+              Họ và tên
             </label>
             <input
               type="text"
@@ -89,14 +89,14 @@ const Register = ({ isOpenRegister, onClose, onLoginClick }) => {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Email
+              Tên đăng nhập
             </label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              placeholder="Email"
+              placeholder="Email or username"
               className={`w-full border ${
                 errors.email ? "border-red-500" : "border-gray-300"
               } rounded-lg p-3 focus:ring-2 focus:ring-[#dce0e3] focus:outline-none text-[#000]`}
