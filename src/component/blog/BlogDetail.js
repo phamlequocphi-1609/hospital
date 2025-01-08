@@ -45,6 +45,14 @@ const BlogDetail = () => {
       create_at: "07 Hours ago",
     },
   ];
+
+  const handleComment = () => {
+    console.log("handleComment");
+  };
+
+  const handleLike = () => {
+    console.log("handleLike");
+  };
   return (
     <section>
       <div className="w-full">
@@ -86,7 +94,10 @@ const BlogDetail = () => {
                 Stop thinking, start doing!
               </div>
               <div className="flex gap-[20px] mt-[20px]">
-                <div className="flex gap-[4px] items-center text-[#757575]">
+                <div
+                  className="flex gap-[4px] items-center text-[#757575]"
+                  onClick={handleLike}
+                >
                   <svg
                     className="w-[20px]"
                     aria-hidden="true"
@@ -105,7 +116,10 @@ const BlogDetail = () => {
                   </svg>
                   20
                 </div>
-                <div className="flex gap-[4px] items-center text-[#757575]">
+                <div
+                  className="flex gap-[4px] items-center text-[#757575]"
+                  onClick={handleComment}
+                >
                   <svg
                     className="w-[20px]"
                     aria-hidden="true"

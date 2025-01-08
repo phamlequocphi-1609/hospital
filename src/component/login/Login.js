@@ -1,6 +1,39 @@
+import { useState } from "react";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const Login = ({ isOpenLogin, onClose, onRegisterClick }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!email) {
+      newErrors.email = "Vui lòng nhập email hoặc tên đăng nhập.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.email = "Email không hợp lệ.";
+    }
+
+    if (!password) {
+      newErrors.password = "Vui lòng nhập mật khẩu.";
+    } else if (password.length < 6) {
+      newErrors.password = "Mật khẩu phải có ít nhất 6 ký tự.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      console.log("Form submitted:", { email, password });
+      // Thực hiện logic đăng nhập ở đây
+    }
+  };
+
   if (isOpenLogin) {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 sm:p-6 md:p-8">
@@ -16,52 +49,49 @@ const Login = ({ isOpenLogin, onClose, onRegisterClick }) => {
               Đăng nhập tài khoản
             </h2>
           </div>
-          <div>
-            <div className="mb-3">
-              <button className="w-full p-3 border rounded-full hover:bg-gray-50 flex items-center justify-center space-x-3 relative">
-                <img
-                  src="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20transform=''%3e%3cg%20fill-rule='evenodd'%3e%3cpath%20d='m17.64%209.2a10.341%2010.341%200%200%200%20-.164-1.841h-8.476v3.481h4.844a4.14%204.14%200%200%201%20-1.8%202.716v2.264h2.909a8.777%208.777%200%200%200%202.687-6.62z'%20fill='%234285f4'/%3e%3cpath%20d='m9%2018a8.592%208.592%200%200%200%205.956-2.18l-2.909-2.258a5.43%205.43%200%200%201%20-8.083-2.852h-3.007v2.332a9%209%200%200%200%208.043%204.958z'%20fill='%2334a853'/%3e%3cpath%20d='m3.964%2010.71a5.321%205.321%200%200%201%200-3.42v-2.332h-3.007a9.011%209.011%200%200%200%200%208.084z'%20fill='%23fbbc05'/%3e%3cpath%20d='m9%203.58a4.862%204.862%200%200%201%203.44%201.346l2.581-2.581a8.649%208.649%200%200%200%20-6.021-2.345%209%209%200%200%200%20-8.043%204.958l3.007%202.332a5.364%205.364%200%200%201%205.036-3.71z'%20fill='%23ea4335'/%3e%3c/g%3e%3cpath%20d='m0%200h18v18h-18z'%20fill='none'/%3e%3c/g%3e%3c/svg%3e"
-                  className="w-5 h-5 absolute left-[16px]"
-                  alt="Google"
-                />
-                <span className="text-[14px] font-semibold line-[40px] text-[#000] ">
-                  Đăng nhập với Google
-                </span>
-              </button>
-            </div>
-          </div>
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Name
-              </label>
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#f05123] focus:outline-none text-[#000]"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Email
+                Tên đăng nhập
               </label>
               <input
                 type="email"
-                placeholder="Email"
-                className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#f05123] focus:outline-none text-[#000]"
+                placeholder="Email hoặc Username"
+                className={`w-full border rounded-lg p-3 focus:ring-2 focus:outline-none ${
+                  errors.email
+                    ? "border-red-500 focus:ring-red-500"
+                    : "border-gray-300 focus:ring-[#f05123]"
+                }`}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
+              {errors.email && (
+                <p className="text-sm text-red-500 mt-1">{errors.email}</p>
+              )}
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Password
+                Mật khẩu
               </label>
               <input
                 type="password"
                 placeholder="Password"
-                className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#f05123] focus:outline-none text-[#000]"
+                className={`w-full border rounded-lg p-3 focus:ring-2 focus:outline-none ${
+                  errors.password
+                    ? "border-red-500 focus:ring-red-500"
+                    : "border-gray-300 focus:ring-[#f05123]"
+                }`}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
+              {errors.password && (
+                <p className="text-sm text-red-500 mt-1">{errors.password}</p>
+              )}
             </div>
-            <button className="w-full bg-[#f05123] p-3 rounded-lg font-semibold hover:bg-[#d63f11] transition-colors duration-200">
+            <button
+              type="submit"
+              className="w-full bg-[#f05123] p-3 rounded-lg font-semibold hover:bg-[#d63f11] transition-colors duration-200"
+            >
               Đăng nhập
             </button>
           </form>

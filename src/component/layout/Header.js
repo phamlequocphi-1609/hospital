@@ -1,6 +1,6 @@
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../../assets/img/logo.png";
+import logo from "../../assets/img/logocustom.png";
 import ButtonLink from "../../core/ButtonLink";
 import Register from "../register/Register";
 import Overlay from "../../core/Overlay";
