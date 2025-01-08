@@ -500,6 +500,10 @@ const BlogList = () => {
   const currentPageData = blogData.slice(offset, offset + limit);
   const handlePageClick = ({ selected }) => {
     setCurrentPage(selected);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const feeds = [
